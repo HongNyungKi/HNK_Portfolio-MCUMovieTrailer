@@ -17,6 +17,7 @@ request.onload = ()=>{
     const res = request.response;
     headerList.makeHeaderList(res);
     trailer.makeVideo(res);
+    headerList.autoScroll();
 }
 
 
