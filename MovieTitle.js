@@ -13,4 +13,17 @@ export default class MovieTitle{
         this.headerList.appendChild(this.movieTitle);
         }
     }
+    autoScroll(e){
+        const headerTitle = document.querySelectorAll('.movie__title');
+        const movieTrailer = document.querySelectorAll('.video__container');
+        
+        for(let i = 0; i < headerTitle.length; i++){
+            headerTitle[i].addEventListener('click',(e)=>{
+                e.preventDefault();
+                movieTrailer[i].scrollIntoView({behavior:'smooth'});
+            })
+        }
+    }
 }
+
+
